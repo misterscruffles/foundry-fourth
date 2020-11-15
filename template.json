@@ -137,5 +137,95 @@
             ]
         }
     },
-    "Item": {}
+    "Item": {
+        "types": [
+            "weapon",
+            "armor",
+            "feat"
+        ],
+        "templates": {
+            "physicalItem": {
+                "cost": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 10000000
+                },
+                "weight": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 10000
+                }
+            },
+            "damage": {
+                "count": {
+                    "value": 1
+                },
+                "faces": {
+                    "value": 6,
+                    "min": 4,
+                    "max": 20
+                },
+                "bonus": {
+                    "raw": {
+                        "value": 0
+                    },
+                    "stat": "none"
+                },
+                "weaponDice": 0
+            },
+            "paperDoll": {
+                "slot": {
+                    "value": "armor"
+                },
+                "equippable": false
+            }
+        },
+        "weapon": {
+            "templates": [
+                "damage",
+                "physicalItem",
+                "paperDoll"
+            ],
+            "proficiencyBonus": {
+                "value": 0
+            },
+            "weaponType": {
+                "value": "melee"
+            },
+            "range": {
+                "value": 1,
+                "long": 1
+            },
+            "weaponGroup": {
+                "value": "lightblade"
+            },
+            "properties": {}
+        },
+        "armor": {
+            "templates": [
+                "physicalItem",
+                "paperDoll"
+            ],
+            "ac": {
+                "value": 0,
+                "min": 0,
+                "max": 25
+            },
+            "minimum": {
+                "value": 0,
+                "min": 0,
+                "max": 25
+            },
+            "checkPenalty": {
+                "value": 0,
+                "min": -25,
+                "max": 0
+            },
+            "speedPenalty": {
+                "value": 0,
+                "min": -25,
+                "max": 0
+            }
+        }
+    }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "foured",
+  "version": "0.0.1",
+  "description": "That game system people like",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DianeOfTheMoon/foundry-fourth.git"
+  },
+  "author": "DianeOfTheMoon",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/DianeOfTheMoon/foundry-fourth/issues"
+  },
+  "homepage": "https://github.com/DianeOfTheMoon/foundry-fourth#readme",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.4"
+  }
+}
