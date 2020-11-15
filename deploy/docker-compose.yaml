@@ -1,0 +1,46 @@
+version: "3.8"
+x-aws-cluster: "arn:aws:ecs:us-east-1:742332197642:cluster/astral-deploy"
+x-aws-loadbalancer: "arn:aws:elasticloadbalancing:us-east-1:742332197642:loadbalancer/net/astral-sea-balancer/20807e890decf122"
+x-aws-vpc: "vpc-f34b8296"
+secrets:
+  config_json:
+    file: secrets.json
+services:
+  foundry:
+    image: felddy/foundryvtt:release
+    hostname: astralsea
+    init: true
+    restart: "unless-stopped"
+    networks:
+      - vpc-group
+    volumes:
+      - type: volume
+        source: foundry-files
+        target: /data
+    ports:
+      - target: 30000
+        published: 30000
+        protocol: tcp
+    secrets:
+      - source: config_json
+        target: config.json
+    environment:
+      CONTAINER_CACHE: /data/container-cache
+    deploy:
+      mode: replicated
+      replicas: 1
+volumes:
+  foundry-files:
+    driver: azure_file
+    driver_opts:
+      share_name: foundryshare
+      storage_account_name: foundrydnd
+      backup_policy: ENABLED
+      lifecycle_policy: AFTER_14_DAYS
+      performance_mode: maxIO
+      throughput_mode: provisioned
+      provisioned_throughput: 1024
+networks:
+  vpc-group:
+    external: true
+    name: "sg-287fe84d"
