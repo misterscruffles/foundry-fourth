@@ -1,0 +1,141 @@
+{
+    "Actor": {
+        "types": [
+            "character",
+            "npc",
+            "monster"
+        ],
+        "templates": {
+            "stat_block": {
+                "strength": {
+                    "value": 10
+                },
+                "constitution": {
+                    "value": 10
+                },
+                "dexterity": {
+                    "value": 10
+                },
+                "intelligence": {
+                    "value": 10
+                },
+                "wisdom": {
+                    "value": 10
+                },
+                "charisma": {
+                    "value": 10
+                }
+            },
+            "defenses": {
+                "ac": {
+                    "value": 10
+                },
+                "fortitude": {
+                    "value": 0
+                },
+                "reflex": {
+                    "value": 0
+                },
+                "will": {
+                    "value": 0
+                }
+            },
+            "health": {
+                "hp": {
+                    "value": 10,
+                    "min": -10,
+                    "max": 10,
+                    "temp": 0,
+                    "tempmax": 0
+                },
+                "bloodied": {
+                    "value": 5
+                },
+                "surges": {
+                    "value": 5,
+                    "max": 5,
+                    "restores": 5
+                }
+            },
+            "skills": {
+                "acrobatics": {
+                    "value": 0,
+                    "stat": "dexterity"
+                },
+                "arcana": {
+                    "value": 0,
+                    "stat": "intelligence"
+                },
+                "athletics": {
+                    "value": 0,
+                    "stat": "strength"
+                },
+                "bluff": {
+                    "value": 0,
+                    "stat": "charisma"
+                },
+                "diplomacy": {
+                    "value": 0,
+                    "stat": "charisma"
+                },
+                "dungeoneering": {
+                    "value": 0,
+                    "stat": "wisdom"
+                },
+                "endurance": {
+                    "value": 0,
+                    "stat": "constitution"
+                },
+                "heal": {
+                    "value": 0,
+                    "stat": "wisdom"
+                },
+                "history": {
+                    "value": 0,
+                    "stat": "intelligence"
+                },
+                "insight": {
+                    "value": 0,
+                    "stat": "wisdom"
+                },
+                "intimidate": {
+                    "value": 0,
+                    "stat": "charisma"
+                },
+                "nature": {
+                    "value": 0,
+                    "stat": "wisdom"
+                },
+                "perception": {
+                    "value": 0,
+                    "stat": "wisdom"
+                },
+                "religion": {
+                    "value": 0,
+                    "stat": "intelligence"
+                },
+                "stealth": {
+                    "value": 0,
+                    "stat": "dexterity"
+                },
+                "streetwise": {
+                    "value": 0,
+                    "stat": "charisma"
+                },
+                "thievery": {
+                    "value": 0,
+                    "stat": "dexterity"
+                }
+            }
+        },
+        "character": {
+            "templates": [
+                "stat_block",
+                "defenses",
+                "skills",
+                "health"
+            ]
+        }
+    },
+    "Item": {}
+}
