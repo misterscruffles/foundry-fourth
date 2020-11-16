@@ -18,5 +18,5 @@
     "secondaryTokenAttribute": "health.surges",
     "socket": true,
     "manifest": "https://raw.githubusercontent.com/DianeOfTheMoon/foundry-fourth/main/system.json",
-    "download": "https://github.com/DianeOfTheMoon/releases/foundry-fourth/archive/foured.zip"
+    "download": "https://github.com/DianeOfTheMoon/foundry-fourth/releases/download/0.0.1/foured.zip"
 }
