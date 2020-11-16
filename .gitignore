@@ -104,3 +104,4 @@ dist
 .tern-port
 
 deploy/secrets.json
+module/
