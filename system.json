@@ -16,5 +16,7 @@
     "gridUnits": "ft",
     "primaryTokenAttribute": "health.hp",
     "secondaryTokenAttribute": "health.surges",
-    "socket": true
+    "socket": true,
+    "manifest": "https://raw.githubusercontent.com/DianeOfTheMoon/foundry-fourth/main/system.json",
+    "download": ""
 }
