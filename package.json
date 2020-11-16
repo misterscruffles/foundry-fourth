@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DianeOfTheMoon/foundry-fourth#readme",
   "devDependencies": {
+    "foundry-pc-types": "gitlab:foundry-projects/foundry-pc/foundry-pc-types",
     "typescript": "^4.0.5"
   },
   "dependencies": {

@@ -199,6 +199,9 @@
             "weaponGroup": {
                 "value": "lightblade"
             },
+            "weaponCategory": {
+                "value": "simple"
+            },
             "properties": {}
         },
         "armor": {

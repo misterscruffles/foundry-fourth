@@ -6,7 +6,9 @@
         "target": "ES6",
         "sourceMap": true,
         "declaration": true,
-        "strict": true
+        "types": [
+            "foundry-pc-types"
+        ]
     },
     "include": [
         "./ts/**/*.ts"

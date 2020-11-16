@@ -1,23 +1,22 @@
-enum WeaponGroup {
-    None = "none",
-    Unarmed = "unarmed",
-    LightBlade = "lightblade",
-    HeavyBlade = "heavyblade",
-    Mace = "mace",
-    Spear = "spear",
-    Staff = "staff",
-    Axe = "axe",
-    Hammer = "hammer",
-    Pick = "pick",
-    Polearm = "polearm",
-    Flail = "flail",
-    Crossbow = "crossbow",
-    Sling = "sling",
-    Bow = "bow"
-}
-
 enum ArmorType {
     None = "none",
     Light = "light",
     Heavy = "heavy"
+}
+
+enum Stat {
+    None = "none",
+    Strength = "strength",
+    Constitution = "constitution",
+    Dexterity = "dexterity",
+    Intelligence = "intelligence",
+    Wisdom = "wisdom",
+    Charisma = "charisma"
+}
+
+enum PaperDollSlot {
+    None = "none",
+    Armor = "armor",
+    MainHand = "main",
+    OffHand = "offhand"
 }

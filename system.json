@@ -5,7 +5,9 @@
     "version": "0.0.1",
     "author": "DianeOfTheMoon",
     "scripts": [],
-    "esmodules": [],
+    "esmodules": [
+        "module/foured.js"
+    ],
     "styles": [],
     "packs": [],
     "languages": [],
