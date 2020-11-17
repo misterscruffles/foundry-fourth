@@ -33,7 +33,7 @@ export class WeaponSheet extends ItemSheet<WeaponData, WeaponItem> {
             weaponType: WeaponType,
             weaponCategory: WeaponCategory,
             stats: Stat,
-            properties: data.data.properties.join?.(", "),
+            properties: data.data.properties.values.join?.(", "),
             damageDice: data.data.damage?.count?.value + "d" + data.data.damage?.faces?.value
         }
         if (data.data.damage?.bonus?.raw?.value > 0) {
@@ -49,7 +49,7 @@ export class WeaponSheet extends ItemSheet<WeaponData, WeaponItem> {
      * @param formData 
      */
     _updateObject(_: Event, formData: any) {
-        formData['data.properties'] = formData['data.properties'].split(",").map((s: string) => s.trim());
+        formData['data.properties.value'] = formData['data.properties.value'].split(",").map((s: string) => s.trim());
         const damageDice = formData['data.damage.dice'].toLowerCase().split("d");
         formData['data.damage.count.value'] = damageDice[0];
         if (damageDice[1].indexOf("+") > -1) {
