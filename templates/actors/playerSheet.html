@@ -1,0 +1,43 @@
+<form class="flexcol {{cssClass}}" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+        <div class="header-fields">
+            This is the test sheet, yo.
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+            <div class="resource">
+                <input type="text" name="data.hp.value" value="{{data.hp.value}}" data-dtype="Number" />
+                <span> / </span>
+                <input type="text" name="data.hp.max" value="{{data.hp.max}}" data-dtype="Number" />
+            </div>
+            
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">Attributes</a>
+        <!-- <a class="item" data-tab="items">Items</a> -->
+        <!-- <a class="item" data-tab="attributes">Attributes</a> -->
+    </nav>
+
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        <div class="attributes" data-group="primary" data-tab="attributes">
+            Strength: <input type="text" name="data.strength.value" value="{{data.strength.value}}" data-dtype="Number" aria-label="Strength" />
+            Constitution: <input type="text" name="data.constitution.value" value="{{data.constitution.value}}" data-dtype="Number" />
+            Dexterity: <input type="text" name="data.dexterity.value" value="{{data.dexterity.value}}" data-dtype="Number" />
+            Intelligence: <input type="text" name="data.intelligence.value" value="{{data.intelligence.value}}" data-dtype="Number" />
+            Wisdom: <input type="text" name="data.wisdom.value" value="{{data.wisdom.value}}" data-dtype="Number" />
+            Charisma: <input type="text" name="data.charisma.value" value="{{data.charisma.value}}" data-dtype="Number" />
+        </div>
+        <!-- {{!-- Biography Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="description">
+            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+        </div> -->
+        
+    </section> -->
+</form>

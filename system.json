@@ -4,13 +4,13 @@
     "description": "The fourth edition of that game people like.",
     "version": "0.0.1",
     "author": "DianeOfTheMoon",
-    "scripts": [],
+    "scripts": {
+        "build:watch": "gulp watch"
+    },
     "esmodules": [
         "module/foured.js"
     ],
-    "styles": [
-        "css/weapon-sheet.css"
-    ],
+    "styles": ["css/actors.css", "css/items.css", "css/weapon-sheet.css"],
     "packs": [
         {
             "name": "fouredweapons",
