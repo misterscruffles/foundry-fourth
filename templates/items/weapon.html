@@ -24,6 +24,10 @@
             Prof:
             <input type="text" name="data.proficiencyBonus.value" value="{{data.proficiencyBonus.value}}" />
         </label>
+        <label class="weapon-sheet__details__paperDoll">
+            Slot:
+            {{> selectbox name="data.paperDoll.slot.value" value=data.paperDoll.slot.value options=values.paperDoll }}
+        </label>
         <label class="weapon-sheet__details__range">
             Range:
             <input type="text" name="data.range.value" value="{{data.range.value}}" />

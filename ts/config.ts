@@ -17,7 +17,6 @@ export enum Stat {
 export enum PaperDollSlot {
     None = "none",
     Armor = "armor",
-    MainHand = "main",
-    OffHand = "offhand",
+    OneHand = "onehand",
     TwoHand = "twohand"
 }
