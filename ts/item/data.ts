@@ -1,3 +1,5 @@
+import { Stat, PaperDollSlot } from "../config.js"
+
 export type PhysicalItemData = {
     cost: number;
     weight: number;
@@ -23,5 +25,8 @@ export enum ItemType {
 }
 
 export interface FouredItemSheetData<T> extends ItemSheetData<T> {
+    /**
+     * Additional sheet values to be used.
+     */
     values?: any;
 }

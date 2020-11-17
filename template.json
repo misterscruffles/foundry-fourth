@@ -169,15 +169,21 @@
                     "raw": {
                         "value": 0
                     },
-                    "stat": "none"
+                    "stat": {
+                        "value": "none"
+                    }
                 },
-                "weaponDice": 0
+                "weaponDice": {
+                    "value": 0
+                }
             },
             "paperDoll": {
                 "slot": {
                     "value": "armor"
                 },
-                "equippable": false
+                "equippable": {
+                    "value": false
+                }
             }
         },
         "weapon": {
@@ -202,7 +208,9 @@
             "weaponCategory": {
                 "value": "simple"
             },
-            "properties": {}
+            "properties": {
+                "value": {}
+            }
         },
         "armor": {
             "templates": [

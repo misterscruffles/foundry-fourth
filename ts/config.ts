@@ -1,10 +1,10 @@
-enum ArmorType {
+export enum ArmorType {
     None = "none",
     Light = "light",
     Heavy = "heavy"
 }
 
-enum Stat {
+export enum Stat {
     None = "none",
     Strength = "strength",
     Constitution = "constitution",
@@ -14,9 +14,10 @@ enum Stat {
     Charisma = "charisma"
 }
 
-enum PaperDollSlot {
+export enum PaperDollSlot {
     None = "none",
     Armor = "armor",
     MainHand = "main",
-    OffHand = "offhand"
+    OffHand = "offhand",
+    TwoHand = "twohand"
 }

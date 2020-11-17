@@ -1,14 +1,61 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
-    <header class="sheet-header flexrow">
-        <img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img" />
-        <div class="header-details flexrow">
+<form class="{{cssClass}} flexcol weapon-sheet" autocomplete="off">
+    <header class="sheet-header flexrow weapon-sheet__header">
+        <img class="profile weapon-sheet__item-img" src="{{item.img}}" title="{{item.name}}" data-edit="img" />
+        <div class="header-details flexrow weapon-sheet__title">
             <h1 class="charname">
                 <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'foured.ItemName'}}" />
             </h1>
         </div>
-        <div class="header-details flexrow">
-            {{ debug data values }}
-            {{> selectbox name="weaponType" value=data.weaponType.value options=values.weaponType }}
-        </div>
     </header>
+    <section class="weapon-sheet__details">
+        <label class="weapon-sheet__details__category">
+            Category:
+            {{> selectbox name="data.weaponCategory.value" value=data.weaponCategory.value options=values.weaponCategory }}
+        </label>
+        <label class="weapon-sheet__details__type">
+            Type:
+            {{> selectbox name="data.weaponType.value" value=data.weaponType.value options=values.weaponType }}
+        </label>
+        <label class="weapon-sheet__details__group">
+            Group:
+            {{> selectbox name="data.weaponGroup.value" value=data.weaponGroup.value options=values.weaponGroup }}
+        </label>
+        <label class="weapon-sheet__details__proficiency">
+            Prof:
+            <input type="text" name="data.proficiencyBonus.value" value="{{data.proficiencyBonus.value}}" />
+        </label>
+        <label class="weapon-sheet__details__range">
+            Range:
+            <input type="text" name="data.range.value" value="{{data.range.value}}" />
+            {{#if (eq data.weaponType.value "ranged")}}
+            /<input type="text" name="data.range.long" value="{{data.range.long}}" />
+            {{else}}
+            <input type="hidden" name="data.range.long" value="{{data.range.value}}" />
+            {{/if}}
+        </label>
+        <label class="weapon-sheet__details__properties">
+            Props:
+            <input type="text" name="data.properties" value="{{values.properties}}" />
+        </label>
+    </section>
+    <section class="weapon-sheet__damage damage-sheet">
+        <section class="damage-sheet__dice">
+            Damage:
+            <input type="text" name="data.damage.dice" value="{{values.damageDice}}" />
+        </section>
+        <section class="damage-sheet__bonus">
+            Bonus:
+            {{> selectbox name="data.damage.bonus.stat.value" value=data.damage.bonus.stat.value options=values.stats }}
+        </section>
+    </section>
+    <section class="weapon-sheet__physical physical-item-sheet">
+        <label class="physical-item-sheet__cost">
+            Cost:
+            <input type="text" name="data.cost.value" value="{{data.cost.value}}" />
+        </label>
+        <label class="physical-item-sheet__weight">
+            Weight:
+            <input type="text" name="data.weight.value" value="{{data.weight.value}}" />
+        </label>
+    </section>
 </form>
