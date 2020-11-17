@@ -6,7 +6,7 @@ export class PlayerActor extends Actor<PlayerData> {
 
 }
 
-export class PlayerSheet extends ActorSheet<PlayerActor, PlayerData> {
+export class PlayerSheet extends ActorSheet<PlayerData, PlayerActor> {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
