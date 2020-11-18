@@ -21,7 +21,8 @@ export type PaperDollData = {
 
 export enum ItemType {
     Weapon = "weapon",
-    Armor = "armor"
+    Armor = "armor",
+    PlayerClass = "playerClass"
 }
 
 export interface FouredItemSheetData<T> extends ItemSheetData<T> {

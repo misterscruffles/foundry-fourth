@@ -1,0 +1,26 @@
+<form class="{{cssClass}} flexcol class-sheet" autocomplete="off">
+    <header class="sheet-header flexrow class-sheet__header">
+        <img class="profile weapon-sheet__item-img" src="{{item.img}}" title="{{item.name}}" data-edit="img" />
+        <div class="header-details flexrow weapon-sheet__title">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'foured.ItemName'}}" />
+            </h1>
+        </div>
+    </header>
+    <section class="class-sheet__details">
+        {{> standardText sheet="class" title="description" name="data.description.value" value=data.description.value }}
+        {{> standardText sheet="class" title="Starting HP" name="data.hp.value" value=data.hp.value }}
+        {{> selectbox stat}}
+        {{> standardText sheet="class" title="HP per Level" name="data.hp.level" value=data.hp.level }}
+        {{> standardText sheet="class" title="surges" name="data.surges.value" value=data.surges.value }}
+        {{> selectbox stat}}
+        {{> standardText sheet="class" title="AC" name="data.defenses.ac.value" value=data.defenses.ac.value }}
+        {{> standardText sheet="class" title="fortitude" name="data.defenses.fortitude.value" value=data.defenses.fortitude.value }}
+        {{> standardText sheet="class" title="reflex" name="data.defenses.reflex.value" value=data.defenses.reflex.value }}
+        {{> standardText sheet="class" title="will" name="data.defenses.will.value" value=data.defenses.will.value }}
+        {{> standardText sheet="class" title="stats" name="data.derived.stats" value=values.stats }}
+        {{> standardText sheet="class" title="trained skills" name="data.derived.trained" value=values.trained }}
+        {{> standardText sheet="class" title="given skills" name="data.derived.given" value=values.given }}
+        {{> standardText sheet="class" title="additional skills" name="data.skills.additional" value=data.skills.additional }}
+    </section>
+</form>

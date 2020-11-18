@@ -141,6 +141,7 @@
         "types": [
             "weapon",
             "armor",
+            "playerClass",
             "feat"
         ],
         "templates": {
@@ -236,6 +237,50 @@
                 "value": 0,
                 "min": -25,
                 "max": 0
+            }
+        },
+        "playerClass": {
+            "description": {
+                "value": ""
+            },
+            "hp": {
+                "value": 0,
+                "stat": "constitution",
+                "level": 6
+            },
+            "surges": {
+                "value": 0,
+                "stat": "constitution"
+            },
+            "proficiencies": {
+                "armor": {
+                    "value": {}
+                },
+                "weapon": {
+                    "value": {}
+                }
+            },
+            "defenses": {
+                "ac": {
+                    "value": 0
+                },
+                "fortitude": {
+                    "value": 0
+                },
+                "reflex": {
+                    "value": 0
+                },
+                "will": {
+                    "value": 0
+                }
+            },
+            "stat": {
+                "value": {}
+            },
+            "skill": {
+                "value": {},
+                "given": {},
+                "additional": 0
             }
         }
     }

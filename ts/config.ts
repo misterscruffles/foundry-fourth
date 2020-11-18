@@ -20,3 +20,19 @@ export enum PaperDollSlot {
     OneHand = "onehand",
     TwoHand = "twohand"
 }
+
+export enum ClassRole {
+    None = "none",
+    Defender = "none",
+    Striker = "none",
+    Controller = "none",
+    Leader = "none"
+}
+
+export enum PowerSource {
+    None = "none",
+    Arcane = "arcane",
+    Divine = "divine",
+    Martial = "martial",
+    Nature = "nature"
+}
