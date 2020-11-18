@@ -26,18 +26,50 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-        <div class="attributes" data-group="primary" data-tab="attributes">
-            Strength: <input type="text" name="data.strength.value" value="{{data.strength.value}}" data-dtype="Number" aria-label="Strength" />
-            Constitution: <input type="text" name="data.constitution.value" value="{{data.constitution.value}}" data-dtype="Number" />
-            Dexterity: <input type="text" name="data.dexterity.value" value="{{data.dexterity.value}}" data-dtype="Number" />
-            Intelligence: <input type="text" name="data.intelligence.value" value="{{data.intelligence.value}}" data-dtype="Number" />
-            Wisdom: <input type="text" name="data.wisdom.value" value="{{data.wisdom.value}}" data-dtype="Number" />
-            Charisma: <input type="text" name="data.charisma.value" value="{{data.charisma.value}}" data-dtype="Number" />
+        <div class="attributes statContainer" data-group="primary" data-tab="attributes">
+            <h2>Them 'Butes!</h2>
+
+            <div class="attributeBox">                
+                <input type="text" name="data.strength.value" value="{{data.strength.value}}" data-dtype="Number" />
+                <div>
+                    <h3>Strength</h3>                
+                </div>                
+            </div>
+            <div class="attributeBox">                
+                <input type="text" name="data.constitution.value" value="{{data.constitution.value}}" data-dtype="Number" />
+                <div>
+                    <h3>Constitution</h3>                
+                </div>                
+            </div>
+            <div class="attributeBox">                
+                <input type="text" name="data.dexterity.value" value="{{data.dexterity.value}}" data-dtype="Number" />
+                <div>
+                    <h3>Dexterity</h3>                
+                </div>                
+            </div>
+            <div class="attributeBox">                
+                <input type="text" name="data.intelligence.value" value="{{data.intelligence.value}}" data-dtype="Number" />
+                <div>
+                    <h3>Intelligence</h3>                
+                </div>                
+            </div>
+            <div class="attributeBox">                
+                <input type="text" name="data.wisdom.value" value="{{data.wisdom.value}}" data-dtype="Number" />
+                <div>
+                    <h3>Wisdom</h3>                
+                </div>                
+            </div>
+            <div class="attributeBox">                
+                <input type="text" name="data.charisma.value" value="{{data.charisma.value}}" data-dtype="Number" />
+                <div>
+                    <h3>Charisma</h3>                
+                </div>                
+            </div>
         </div>
         <!-- {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div> -->
         
-    </section> -->
+    </section>
 </form>
