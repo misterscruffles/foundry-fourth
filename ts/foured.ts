@@ -2,6 +2,7 @@ import { PlayerSheet, PlayerActor } from "./actors/player.js";
 import { ItemType } from "./item/data.js";
 import { PlayerClassSheet } from "./item/playerClass.js";
 import { WeaponSheet } from "./item/weapon.js";
+import { CombatManager } from "./logic/combat/manager.js";
 
 console.log("foured | Loaded foured.js file");
 
@@ -11,9 +12,10 @@ Hooks.once('init', async function () {
     console.log("foured | Starting foured initialization");
 
     CONFIG.Actor.entityClass = PlayerActor;
+    CombatManager.Register();
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("foured", PlayerSheet, {makeDefault: true})
+    Actors.registerSheet("foured", PlayerSheet, { makeDefault: true });
 
     Items.registerSheet("foured", WeaponSheet, { types: [ItemType.Weapon], makeDefault: true });
     Items.registerSheet("foured", PlayerClassSheet, { type: [ItemType.PlayerClass], makeDefault: true });
