@@ -1,10 +1,11 @@
 import { Stat } from "../config"
+import { FouredItemSheet } from "./data.js";
 
 export class PlayerClassItem extends Item<PlayerClassData> {
 
 }
 
-export class PlayerClassSheet extends ItemSheet<PlayerClassData, PlayerClassItem> {
+export class PlayerClassSheet extends FouredItemSheet<PlayerClassData, PlayerClassItem> {
     static get defaultOptions() {
         const options = super.defaultOptions;
         options.submitOnChange = true;

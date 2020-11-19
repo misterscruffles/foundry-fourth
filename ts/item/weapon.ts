@@ -1,5 +1,5 @@
-import { PhysicalItemData, DamageData, PaperDollData, ItemType, FouredItemSheetData } from "./data.js";
-import { PaperDollSlot, Stat } from "../config.js"
+import { PhysicalItemData, DamageData, PaperDollData, ItemType, FouredItemSheetData, FouredItemSheet } from "./data.js";
+import { PaperDollSlot, Stat, WeaponCategory, WeaponGroup, WeaponType } from "../config.js"
 
 /**
  * Strongly typed version of WeaponData as an item.
@@ -10,7 +10,7 @@ export class WeaponItem extends Item<WeaponData> {
 /**
  * Editing sheet for a weapon.  Uses weapon data and WeaponItem.
  */
-export class WeaponSheet extends ItemSheet<WeaponData, WeaponItem> {
+export class WeaponSheet extends FouredItemSheet<WeaponData, WeaponItem> {
     static get defaultOptions() {
         const options = super.defaultOptions;
         options.submitOnChange = true;
@@ -56,7 +56,7 @@ export class WeaponSheet extends ItemSheet<WeaponData, WeaponItem> {
      * @param formData 
      */
     _updateObject(_: Event, formData: any) {
-        formData['data.properties.value'] = formData['data.properties.value'].split(",").map((s: string) => s.trim());
+        formData['data.properties.value'] = this.stringToList(formData['data.properties.value']);
         const damageDice = formData['data.damage.dice'].toLowerCase().split("d");
         formData['data.damage.count.value'] = damageDice[0];
         if (damageDice[1].indexOf("+") > -1) {
@@ -82,36 +82,4 @@ export type WeaponData = DamageData & PaperDollData & PhysicalItemData & {
         long: number;
     }
 
-}
-
-export enum WeaponGroup {
-    None = "none",
-    Unarmed = "unarmed",
-    LightBlade = "lightblade",
-    HeavyBlade = "heavyblade",
-    Mace = "mace",
-    Spear = "spear",
-    Staff = "staff",
-    Axe = "axe",
-    Hammer = "hammer",
-    Pick = "pick",
-    Polearm = "polearm",
-    Flail = "flail",
-    Crossbow = "crossbow",
-    Sling = "sling",
-    Bow = "bow"
-}
-
-export enum WeaponType {
-    None = "none",
-    Melee = "melee",
-    Ranged = "ranged"
-}
-
-export enum WeaponCategory {
-    None = "none",
-    Simple = "simple",
-    Military = "military",
-    Superior = "superior",
-    Improvised = "improvised"
 }

@@ -36,3 +36,34 @@ export enum PowerSource {
     Martial = "martial",
     Nature = "nature"
 }
+export enum WeaponGroup {
+    None = "none",
+    Unarmed = "unarmed",
+    LightBlade = "lightblade",
+    HeavyBlade = "heavyblade",
+    Mace = "mace",
+    Spear = "spear",
+    Staff = "staff",
+    Axe = "axe",
+    Hammer = "hammer",
+    Pick = "pick",
+    Polearm = "polearm",
+    Flail = "flail",
+    Crossbow = "crossbow",
+    Sling = "sling",
+    Bow = "bow"
+}
+
+export enum WeaponType {
+    None = "none",
+    Melee = "melee",
+    Ranged = "ranged"
+}
+
+export enum WeaponCategory {
+    None = "none",
+    Simple = "simple",
+    Military = "military",
+    Superior = "superior",
+    Improvised = "improvised"
+}

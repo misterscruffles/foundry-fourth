@@ -1,4 +1,4 @@
-import { Stat, PaperDollSlot } from "../config.js"
+import { PowerSource, Stat, PaperDollSlot, ArmorType, ClassRole, WeaponType, WeaponGroup, WeaponCategory } from "../config.js"
 
 export type PhysicalItemData = {
     cost: number;
@@ -25,9 +25,36 @@ export enum ItemType {
     PlayerClass = "playerClass"
 }
 
+export class FouredItemSheet<D, I> extends ItemSheet<D, Item<D>> {
+    getData(): ItemSheetData<D> {
+        const data: FouredItemSheetData<D> = super.getData();
+        data.selectOptions = {
+            itemType: ItemType,
+            powerSource: PowerSource,
+            stat: Stat,
+            classRole: ClassRole,
+            paperDollSlot: PaperDollSlot,
+            armorType: ArmorType,
+            weaponType: WeaponType,
+            weaponGroup: WeaponGroup,
+            weaponCategory: WeaponCategory
+        }
+        return data;
+    }
+
+    _updateObject(_: Event, formData: any) {
+        return this.object.update(formData);
+    }
+
+    protected stringToList(value: string): Array<string> {
+        return value.split(",").map((s: string) => s.trim());
+    }
+};
+
 export interface FouredItemSheetData<T> extends ItemSheetData<T> {
     /**
      * Additional sheet values to be used.
      */
     values?: any;
+    selectOptions?: any;
 }

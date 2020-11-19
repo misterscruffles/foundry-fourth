@@ -10,10 +10,10 @@
     <section class="class-sheet__details">
         {{> standardText sheet="class" title="description" name="data.description.value" value=data.description.value }}
         {{> standardText sheet="class" title="Starting HP" name="data.hp.value" value=data.hp.value }}
-        {{> selectbox stat}}
+        {{> selectbox name="data.hp.stat" value=data.hp.stat options=selectOptions.stat }}
         {{> standardText sheet="class" title="HP per Level" name="data.hp.level" value=data.hp.level }}
         {{> standardText sheet="class" title="surges" name="data.surges.value" value=data.surges.value }}
-        {{> selectbox stat}}
+        {{> selectbox name="data.surges.stat" value=data.hp.stat options=selectOptions.stat}}
         {{> standardText sheet="class" title="AC" name="data.defenses.ac.value" value=data.defenses.ac.value }}
         {{> standardText sheet="class" title="fortitude" name="data.defenses.fortitude.value" value=data.defenses.fortitude.value }}
         {{> standardText sheet="class" title="reflex" name="data.defenses.reflex.value" value=data.defenses.reflex.value }}

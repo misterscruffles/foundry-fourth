@@ -18,10 +18,10 @@ Hooks.once('init', async function () {
         console.log(a);
     });
 
-    Handlebars.registerHelper('capitalizeFirst', function (word: string) {
-        return word.capitalize();
+    Handlebars.registerHelper('titleCase', function (word: string) {
+        return word.titleCase();
     });
 
     Handlebars.registerPartial('selectbox', '<select name="{{name}}">{{#each options}}<option value="{{this}}"{{#if (eq ../value this)}} selected{{/if}}>{{this}}</option>{{/each}}</select>');
-    Handlebars.registerPartial('standardText', '<label class="{{sheet}}-sheet__details {{sheet}}-sheet__details__{{name}}">{{capitalizeFirst title}}:<input type="text" name="{{name}}" value="{{value}}" /></label>');
+    Handlebars.registerPartial('standardText', '<label class="{{sheet}}-sheet__details {{sheet}}-sheet__details__{{name}}">{{titleCase title}}:<input type="text" name="{{name}}" value="{{value}}" /></label>');
 });
