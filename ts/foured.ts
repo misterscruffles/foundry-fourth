@@ -1,7 +1,8 @@
 import { PlayerSheet, PlayerActor } from "./actors/player.js";
 import { ItemType } from "./item/data.js";
-import { PlayerClassSheet } from "./item/playerClass.js";
-import { WeaponSheet } from "./item/weapon.js";
+import { PlayerClassSheet, PlayerClassItem } from "./item/playerClass.js";
+import { WeaponSheet, WeaponItem } from "./item/weapon.js";
+import { PowerSheet, PowerItem } from "./item/power.js";
 import { CombatManager } from "./logic/combat/manager.js";
 
 console.log("foured | Loaded foured.js file");
@@ -18,7 +19,8 @@ Hooks.once('init', async function () {
     Actors.registerSheet("foured", PlayerSheet, { makeDefault: true });
 
     Items.registerSheet("foured", WeaponSheet, { types: [ItemType.Weapon], makeDefault: true });
-    Items.registerSheet("foured", PlayerClassSheet, { type: [ItemType.PlayerClass], makeDefault: true });
+    Items.registerSheet("foured", PowerSheet, { types: [ItemType.Power], makeDefault: true });
+    Items.registerSheet("foured", PlayerClassSheet, { types: [ItemType.PlayerClass], makeDefault: true });
 
     Handlebars.registerHelper('debug', function (...a) {
         console.log(a);

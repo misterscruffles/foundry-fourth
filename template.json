@@ -142,7 +142,8 @@
             "weapon",
             "armor",
             "playerClass",
-            "feat"
+            "feat",
+            "power"
         ],
         "templates": {
             "physicalItem": {
@@ -282,6 +283,35 @@
                 "given": {},
                 "additional": 0
             }
+        },
+        "power": {
+            "description": {
+                "value": ""
+            },
+            "requirements": {
+                "playerClass": {
+                    "value": ""
+                },
+                "playerLevel": {
+                    "value": 1
+                }
+            },
+            "cost": {
+                "value": "standard",
+                "refresh": "encounter"
+            },
+            "target": {
+                "type": "enemy",
+                "count": 1,
+                "range": {
+                    "value": "melee",
+                    "distance": 0
+                }
+            },
+            "properties": [],
+            "onUse": [],
+            "onSuccess": [],
+            "onFail": []
         }
     }
 }

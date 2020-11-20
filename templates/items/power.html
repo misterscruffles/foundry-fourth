@@ -1,0 +1,12 @@
+<form class="{{cssClass}} flexcol power-sheet" autocomplete="off">
+    <header class="sheet-header flexrow class-sheet__header">
+        <img class="profile weapon-sheet__item-img" src="{{item.img}}" title="{{item.name}}" data-edit="img" />
+        <div class="header-details flexrow weapon-sheet__title">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'foured.ItemName'}}" />
+            </h1>
+        </div>
+    </header>
+    {{> standardText title="Description" name="data.description.value" sheet="power" value=data.description.value }}
+    {{> standardText title="Level" name="data.requirements.playerLevel" sheet="power" value=data.requirements.playerLevel }}
+</form>
