@@ -1,8 +1,17 @@
-import { AbilityScores } from "./data";
+import { AbilityScores, Level } from "./data";
 
-export class PlayerActor extends Actor<PlayerData> {
+export class PlayerActor extends Actor {
 
-    public derp: string = "derp";
+    prepareDerivedData() {
+        const actorData = this.data;
+        // The character data
+        const data = actorData.data;
+
+        data.initiative = {}
+        data.initiative.modifier = Math.floor(data.dexterity.value - 10) / 2;
+        // TODO: iterate through equipped items/feats/etc to determine the current init bonus
+        data.initiative.bonus = 0;
+    }
 
 }
 
@@ -38,7 +47,8 @@ export class PlayerSheet extends ActorSheet<PlayerData, PlayerActor> {
 export type PlayerData = AbilityScores & {
     name: string;
     hp: {
-            value: number;
-            max: number;
-        }
+        value: number;
+        max: number;
+    }
+    level: Level
 }
