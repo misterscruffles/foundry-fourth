@@ -10,3 +10,8 @@ export type AbilityScores = {
 export type AbilityScore = {
     value: number
 }
+
+export type Level = {
+    experience: number,
+    value: number
+}

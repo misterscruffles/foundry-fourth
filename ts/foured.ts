@@ -5,8 +5,12 @@ import { WeaponSheet } from "./item/weapon.js";
 
 console.log("foured | Loaded foured.js file");
 
+CONFIG.Combat.initiative.formula = "1d20 + @initiative.modifier + @initiative.bonus";
+
 Hooks.once('init', async function () {
     console.log("foured | Starting foured initialization");
+
+    CONFIG.Actor.entityClass = PlayerActor;
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("foured", PlayerSheet, {makeDefault: true})
