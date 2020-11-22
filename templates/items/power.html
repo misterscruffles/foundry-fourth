@@ -8,5 +8,46 @@
         </div>
     </header>
     {{> standardText title="Description" name="data.description.value" sheet="power" value=data.description.value }}
-    {{> standardText title="Level" name="data.requirements.playerLevel" sheet="power" value=data.requirements.playerLevel }}
+    {{> standardText title="Level" name="data.requirements.playerLevel.value" sheet="power" value=data.requirements.playerLevel.value }}
+    <section class="power-sheet__on-use">
+        <h2>On Use Effects:<button type="button" class="add-power-effect add-on-use" id="add-on-use">
+                <i class="fas fa-plus"></i>Add</button></h2>
+        {{#each data.onUse}}
+        <div class="power-sheet__effect">
+            {{ selectMap (concat "data.onUse[" @index "].effect") ../values.onUse effect}}
+            {{ provideEffectConfig effect (concat "data.onUse[" @index "].config.") config}}
+        </div>
+        {{/each}}
+    </section>
+    <section class="power-sheet__on-success">
+        <h2>On Success Effects:<button type="button" class="add-power-effect add-on-success" id="add-on-success"><i
+                    class="fas fa-plus"></i>Add</button></h2>
+        {{#each data.onSuccess}}
+        <div class="power-sheet__effect">
+            {{ selectMap (concat "data.onSuccess[" @index "].effect") ../values.onUsed effect}}
+            {{ provideEffectConfig effect (concat "data.onSuccess[" @index "].config.") config}}
+        </div>
+        {{/each}}
+    </section>
+    <section class="power-sheet__on-fail">
+        <h2>On Fail Effects:<button type="button" class="add-power-effect add-on-fail" id="add-on-fail">Add</button>
+        </h2>
+        {{#each data.onFail}}
+        <div class="power-sheet__effect">
+            {{ selectMap (concat "data.onFail[" @index "].effect") ../values.onUsed effect}}
+            {{ provideEffectConfig effect (concat "data.onFail[" @index "].config.") config}}
+        </div>
+        {{/each}}
+
+    </section>
+    <section class="power-sheet__on-complete">
+        <h2>On Complete Effects:<button type="button" class="add-power-effect add-on-complete"
+                id="add-on-complete">Add</button></h2>
+        {{#each data.onComplete}}
+        <div class="power-sheet__effect">
+            {{ selectMap (concat "data.onComplete[" @index "].effect") ../values.onUsed effect}}
+            {{ provideEffectConfig effect (concat "data.onComplete[" @index "].config.") config}}
+        </div>
+        {{/each}}
+    </section>
 </form>

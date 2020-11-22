@@ -67,3 +67,11 @@ export enum WeaponCategory {
     Superior = "superior",
     Improvised = "improvised"
 }
+
+export enum Defensive {
+    None = "none",
+    AC = "ac",
+    Will = "will",
+    Reflex = "reflex",
+    Fortitude = "fortitude"
+}

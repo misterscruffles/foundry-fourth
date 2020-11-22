@@ -27,8 +27,9 @@ export enum ItemType {
 }
 
 export class FouredItemSheet<D, I> extends ItemSheet<D, Item<D>> {
-    getData(): ItemSheetData<D> {
+    getData(): FouredItemSheetData<D> {
         const data: FouredItemSheetData<D> = super.getData();
+        data.values = {};
         data.selectOptions = {
             itemType: ItemType,
             powerSource: PowerSource,

@@ -177,6 +177,9 @@
                 },
                 "weaponDice": {
                     "value": 0
+                },
+                "halve": {
+                    "value": false
                 }
             },
             "paperDoll": {
@@ -294,6 +297,9 @@
                 },
                 "playerLevel": {
                     "value": 1
+                },
+                "automatic": {
+                    "value": false
                 }
             },
             "cost": {
@@ -311,7 +317,8 @@
             "properties": [],
             "onUse": [],
             "onSuccess": [],
-            "onFail": []
+            "onFail": [],
+            "onComplete": []
         }
     }
 }
