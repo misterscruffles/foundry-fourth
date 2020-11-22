@@ -1,5 +1,6 @@
 import { Stat } from "../config"
 import { FouredItemSheet } from "./data.js";
+import {Defenses, Hp} from "../common/data";
 
 export class PlayerClassItem extends Item<PlayerClassData> {
 
@@ -38,20 +39,7 @@ export type PlayerClassData = {
             value: {}
         }
     };
-    defenses: {
-        ac: {
-            value: number;
-        },
-        fortitude: {
-            value: number;
-        },
-        reflex: {
-            value: number;
-        },
-        will: {
-            value: number;
-        }
-    },
+    defenses: Defenses,
     stats: {
         value: {}
     },
