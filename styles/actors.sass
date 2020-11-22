@@ -6,34 +6,76 @@
     
     
 .playerSheet
+    flex-grow: 0;
 
-.statContainer
-    width: 12em;
+    h2, h3
+        color: #8b0000;
+        font-family: 'ravenna';
+        font-weight: bold;
+        text-shadow: 0px 0px 1px #FFA500;
+        margin-top: auto;
+        margin-bottom: auto;
 
-.attributeBox
-    background-color: black;
-    display: flex;
-    flex-direction: row;    
-    margin-left: 20px;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;    
-    margin-bottom: 5px;
-
-    div, h3                        
+    h4
         color: white;
         text-align: center;        
         font-family: 'ravenna';
+        text-shadow: 0px 0px 2px #444444;
         margin-top: auto;
         margin-bottom: auto;
 
-    input
-        background-color: white;
-        border: 1px solid black;
-        width: 3em;
-        margin-left: -20px;
-        vertical-align: middle;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-right: 20px;
+    section
+        flex-grow: 0;    
 
+    .flexRow
+        display: flex;
+        flex-direction: row;
+
+    .inputStack
+        flex-direction: column;    
+        padding: 5px;
+        flex-grow: 0;
+        margin: 5px;
+        width: 12em;
+
+        span
+            background-color: black;        
+            display: flex;
+            justify-content: flex-end;                    
+            border-radius: 5px;
+            padding: 5px;
+            flex-direction: row;
+            flex-grow: 0;
+            margin: 2px;
+
+        input            
+            background-color: white;
+            border: 1px solid black;
+            width: 3em;        
+            vertical-align: middle;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 5px;
+            margin-right: -20px;
+
+    .flexLine
+        display: flex;
+        flex-grow: 0;
+
+    .resourceBox
+
+        div
+            display: flex;
+            background-color: black;
+            justify-content: space-around;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            span
+                flex-direction: row;
+
+            input
+                background-color: white;
+                border: 1px solid black;

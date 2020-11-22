@@ -126,6 +126,14 @@
                     "value": 0,
                     "stat": "dexterity"
                 }
+            },
+            "senses": {
+                "perception": {
+                    "value": 10
+                },
+                "insight": {
+                    "value": 10
+                }
             }
         },
         "character": {
