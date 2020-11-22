@@ -1,4 +1,5 @@
-import { AbilityScores, Level } from "./data";
+import { AbilityScores, CharacterLevel, Senses } from "./data";
+import {Hp, Defenses} from "../common/data";
 
 export class PlayerActor extends Actor {
 
@@ -7,10 +8,19 @@ export class PlayerActor extends Actor {
         // The character data
         const data = actorData.data;
 
+        /* Initiative */
         data.initiative = {}
-        data.initiative.modifier = Math.floor(data.dexterity.value - 10) / 2;
-        // TODO: iterate through equipped items/feats/etc to determine the current init bonus
+        data.initiative.modifier = Math.floor((data.dexterity.value - 10) / 2);
+        // TODO: Calculate additional initiative bonuses
         data.initiative.bonus = 0;
+        data.initiative.value = data.initiative.modifier + data.initiative.bonus;
+        
+        /* Health */
+        data.hp.bloodied = Math.floor(data.hp.max/2);
+
+        data.movement = {
+            value: 6
+        }
     }
 
 }
@@ -21,8 +31,8 @@ export class PlayerSheet extends ActorSheet<PlayerData, PlayerActor> {
         return mergeObject(super.defaultOptions, {
             classes: ["foured", "sheet", "player-character"],
             template: "systems/foured/templates/actors/playerSheet.html",
-            width: 600,
-            height: 600,
+            width: 800,
+            height: 800,
             tabs: [
                 {
                     navSelector: ".sheet-tabs",
@@ -36,19 +46,14 @@ export class PlayerSheet extends ActorSheet<PlayerData, PlayerActor> {
 
 
     _updateObject(event: Event, formData: any): Promise<PlayerActor> {
-
-        console.log(JSON.stringify(formData));
-
-
         return this.object.update(formData) as any;
     }
 }
 
-export type PlayerData = AbilityScores & {
+export type PlayerData = AbilityScores & Defenses & {
     name: string;
-    hp: {
-        value: number;
-        max: number;
-    }
-    level: Level
+    hp: Hp;
+    level: CharacterLevel    
+    senses: Senses;
+
 }

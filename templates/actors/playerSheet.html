@@ -1,19 +1,100 @@
-<form class="flexcol {{cssClass}}" autocomplete="off">
+<form class="flexcol playerSheet {{cssClass}}" autocomplete="off">
 
     {{!-- Sheet Header --}}
     <header class="sheet-header">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
         <div class="header-fields">
-            This is the test sheet, yo.
+            <h2>Player Character Sheet</h2>
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-            <div class="resource">
-                <input type="text" name="data.hp.value" value="{{data.hp.value}}" data-dtype="Number" />
-                <span> / </span>
-                <input type="text" name="data.hp.max" value="{{data.hp.max}}" data-dtype="Number" />
-            </div>
-            
         </div>
     </header>
+
+    <div class="flexLine">
+        <div class="resourceBox">
+            <h3>Health</h3>
+            <div>
+                <span>
+                    <h4>Current</h4><input type="text" name="data.hp.value" value="{{data.hp.value}}"
+                        data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Max</h4><input type="text" name="data.hp.max" value="{{data.hp.max}}" data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Temp</h4><input type="text" name="data.hp.temporary" value="{{data.hp.temporary}}"
+                        data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Bloodied</h4><input type="text" name="data.hp.bloodied" disabled="true"
+                        value="{{data.hp.bloodied}}" data-dtype="Number" />
+                </span>
+            </div>
+        </div>
+
+        <div class="resourceBox">
+            <h3>Surges</h3>
+            <div>
+                <span>
+                    <h4>Current</h4><input type="text" name="data.surges.value" value="{{data.surges.value}}"
+                        data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Max</h4><input type="text" name="data.surges.max" value="{{data.surges.max}}"
+                        data-dtype="Number" />
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flexRow">
+        <section class="inputStack">
+            <h3>Passives</h3>
+            <div>
+                <span>
+                    <h4>Initiative</h4><input type="text" name="data.initiative.value" value="{{data.initiative.value}}"
+                        data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Movement</h4><input type="text" name="data.movement.value" disabled="true"
+                        value="{{data.movement.value}}" data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Perception</h4><input type="text" name="data.senses.perception.value"
+                        value="{{data.senses.perception.value}}" data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Insight</h4><input type="text" name="data.senses.insight.value"
+                        value="{{data.senses.insight.value}}" data-dtype="Number" />
+                </span>
+            </div>
+        </section>
+
+
+        <section class="inputStack">
+            <h3>Defenses</h3>
+            <div>
+                <span>
+                    <h4>AC</h4>
+                    <input type="text" name="data.ac.value" value="{{data.ac.value}}" data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Fortitude</h4>
+                    <input type="text" name="data.fortitude.value" value="{{data.fortitude.value}}"
+                        data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Reflex</h4>
+                    <input type="text" name="data.reflex.value" value="{{data.reflex.value}}" data-dtype="Number" />
+                </span>
+                <span>
+                    <h4>Will</h4>
+                    <input type="text" name="data.will.value" value="{{data.will.value}}" data-dtype="Number" />
+                </span>
+            </div>
+        </section>
+
+    </div>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
@@ -26,50 +107,39 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-        <div class="attributes statContainer" data-group="primary" data-tab="attributes">
-            <h2>Them 'Butes!</h2>
-
-            <div class="attributeBox">                
+        <div class="attributes inputStack" data-group="primary" data-tab="attributes">
+            <h3>Attributes</h3>
+            <span>
+                <h4>Strength</h4>
                 <input type="text" name="data.strength.value" value="{{data.strength.value}}" data-dtype="Number" />
-                <div>
-                    <h3>Strength</h3>                
-                </div>                
-            </div>
-            <div class="attributeBox">                
-                <input type="text" name="data.constitution.value" value="{{data.constitution.value}}" data-dtype="Number" />
-                <div>
-                    <h3>Constitution</h3>                
-                </div>                
-            </div>
-            <div class="attributeBox">                
+            </span>
+            <span>
+                <h4>Constitution</h4>
+                <input type="text" name="data.constitution.value" value="{{data.constitution.value}}"
+                    data-dtype="Number" />
+            </span>
+            <span>
+                <h4>Dexterity</h4>
                 <input type="text" name="data.dexterity.value" value="{{data.dexterity.value}}" data-dtype="Number" />
-                <div>
-                    <h3>Dexterity</h3>                
-                </div>                
-            </div>
-            <div class="attributeBox">                
-                <input type="text" name="data.intelligence.value" value="{{data.intelligence.value}}" data-dtype="Number" />
-                <div>
-                    <h3>Intelligence</h3>                
-                </div>                
-            </div>
-            <div class="attributeBox">                
+            </span>
+            <span>
+                <h4>Intelligence</h4>
+                <input type="text" name="data.intelligence.value" value="{{data.intelligence.value}}"
+                    data-dtype="Number" />
+            </span>
+            <span>
+                <h4>Wisdom</h4>
                 <input type="text" name="data.wisdom.value" value="{{data.wisdom.value}}" data-dtype="Number" />
-                <div>
-                    <h3>Wisdom</h3>                
-                </div>                
-            </div>
-            <div class="attributeBox">                
+            </span>
+            <span>
+                <h4>Charisma</h4>
                 <input type="text" name="data.charisma.value" value="{{data.charisma.value}}" data-dtype="Number" />
-                <div>
-                    <h3>Charisma</h3>                
-                </div>                
-            </div>
+            </span>
         </div>
         <!-- {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div> -->
-        
+
     </section>
 </form>
