@@ -75,3 +75,12 @@ export enum Defensive {
     Reflex = "reflex",
     Fortitude = "fortitude"
 }
+
+export enum ItemType {
+    None = "none",
+    Weapon = "weapon",
+    PlayerClass = "playerClass",
+    Armor = "armor",
+    Feat = "feat",
+    Power = "power"
+}
