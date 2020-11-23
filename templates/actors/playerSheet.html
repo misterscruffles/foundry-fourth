@@ -99,15 +99,15 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="attributes">Attributes</a>
-        <!-- <a class="item" data-tab="items">Items</a> -->
-        <!-- <a class="item" data-tab="attributes">Attributes</a> -->
+        <a class="item" data-tab="items">Items</a>
+        <a class="item" data-tab="powers">Powers</a>
     </nav>
 
 
     {{!-- Sheet Body --}}
-    <section class="sheet-body">
-
-        <div class="attributes inputStack" data-group="primary" data-tab="attributes">
+    <section class="sheet-body grow">
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes inputStack" data-group="primary" data-tab="attributes">
             <h3>Attributes</h3>
             <span>
                 <h4>Strength</h4>
@@ -141,5 +141,49 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div> -->
 
+        {{!-- Owned Items Tab --}}
+        <div class="tab items" data-group="primary" data-tab="items">
+            <h3>Weapons</h3>
+            <ol class="item-list">
+                {{#each inventory.weapon.items as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        {{item.name}}
+                        <div class="item-controls flexrow">
+                            <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+                        </div>            
+                    </li>
+                {{/each}}
+            </ol>
+
+
+            <h3>Armor</h3>
+            <ol class="item-list">
+                {{#each inventory.armor.items as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        {{item.name}}
+                        <div class="item-controls flexrow">
+                            <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+                        </div>            
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+
+        {{!-- Powers Tab --}}
+        <div class="tab powers" data-group="primary" data-tab="powers">
+            <h3>Powers</h3>
+            <ol class="item-list">
+                {{#each inventory.power.items as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        {{item.name}}
+                        <div class="item-controls flexrow">
+                            <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+                        </div>            
+                    </li>
+                {{/each}}
+            </ol>
+        </div>        
     </section>
+
+
 </form>
