@@ -1,4 +1,4 @@
-import { Stat } from "../config"
+import { Stat } from "../config.js"
 
 export type Defenses = {
     ac: {

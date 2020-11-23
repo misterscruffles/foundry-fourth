@@ -1,4 +1,4 @@
-import {PlayerClassItem} from "../item/playerClass";
+import {PlayerClassItem} from "../item/playerClass.js";
 
 export type AbilityScores = {
     strength: AbilityScore,
