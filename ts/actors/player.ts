@@ -1,5 +1,5 @@
-import { AbilityScores, CharacterLevel, Senses } from "./data";
-import {Hp, Defenses} from "../common/data";
+import { AbilityScores, CharacterLevel, Senses } from "./data.js";
+import {Hp, Defenses} from "../common/data.js";
 
 export class PlayerActor extends Actor {
 

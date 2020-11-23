@@ -1,6 +1,6 @@
-import { Stat } from "../config"
+import { Stat } from "../config.js"
 import { FouredItemSheet } from "./data.js";
-import {Defenses, Hp} from "../common/data";
+import {Defenses, Hp} from "../common/data.js";
 
 export class PlayerClassItem extends Item<PlayerClassData> {
 
