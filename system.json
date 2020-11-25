@@ -2,7 +2,7 @@
     "name": "foured",
     "title": "Fourth Iteration Fantasy Play",
     "description": "The fourth edition of that game people like.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "DianeOfTheMoon",
     "scripts": {
         "build:watch": "gulp watch"
@@ -29,5 +29,5 @@
     "secondaryTokenAttribute": "health.surges",
     "socket": true,
     "manifest": "https://raw.githubusercontent.com/DianeOfTheMoon/foundry-fourth/main/system.json",
-    "download": "https://github.com/DianeOfTheMoon/foundry-fourth/releases/download/0.0.1/foured.zip"
+    "download": "https://github.com/DianeOfTheMoon/foundry-fourth/releases/download/0.0.2/foured.zip"
 }
